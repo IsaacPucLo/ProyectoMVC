@@ -1,12 +1,19 @@
+using System;
 using Microsoft.AspNetCore.Mvc;
+using ProyectoMVC.Models;
 
 namespace ProyectoMVC.Controllers
 {
     public class EscuelaController : Controller
     {
         public IActionResult Index(){
+
+            var escuela = new Escuela();
+            escuela.AñoFundacion = 2005;
+            escuela.EscuelaId = Guid.NewGuid().ToString();
+            escuela.Nombre = "TecNM Campus Progreso";
             
-            return View();  //Sino se le especifica que vista devuelve entonces devuelve el mismo Index
+            return View(escuela);  //Se manda el objeto escuela como parámetro a la vista, para poder hacer uso de la información de escuela en la vista, en este caso imprimir la información
         }
     }
 }
