@@ -1,4 +1,5 @@
-﻿@Model Escuela  <!--Permite que el error se encuentre en tiempo de desarrollo 
+﻿@model Escuela  
+                <!--Permite que el error se encuentre en tiempo de desarrollo 
                     y no en timepo de ejecución, por ejemplo en caso de usar alguna 
                     variable o campo que no corresponda al modelo Escuela-->
 
@@ -9,6 +10,13 @@
 
 <h1>Escuela </h1>
 <h2>Nombre: @Model.Nombre </h2>
+<h3>Tipo de Escuela: @Model.TipoEscuela </h3>
+
+<address>
+    <p>Direccion: @Model.Dirección </p>
+    <p>País: @Model.Pais </p>
+    <p>Ciudad: @Model.Ciudad </p>
+</address>
 <p><strong>Año Fundacion: @Model.AñoDeCreación </strong></p>
 
 <p><i> @ViewBag.CosaDinamica </i></p> <!--ViewBag nos sirve para mandar informacion adicional a 

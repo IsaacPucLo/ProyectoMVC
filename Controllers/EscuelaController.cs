@@ -12,6 +12,10 @@ namespace ProyectoMVC.Controllers
             escuela.AñoDeCreación = 2005;
             escuela.UniqueId = Guid.NewGuid().ToString();
             escuela.Nombre = "TecNM Campus Progreso";
+            escuela.Ciudad = "Progreso";
+            escuela.Pais = "México";
+            escuela.TipoEscuela = TiposEscuela.Secundaria;
+            escuela.Dirección = "Boulevard 7ma";
 
             ViewBag.CosaDinamica = "La monja";
             
