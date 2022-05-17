@@ -1,7 +1,11 @@
-﻿@{
+﻿@Model Escuela  <!--Permite que el error se encuentre en tiempo de desarrollo 
+                    y no en timepo de ejecución, por ejemplo en caso de usar alguna 
+                    variable o campo que no corresponda al modelo Escuela-->
+
+@{
     ViewData["Title"] = "Informacion Escuela";
 }
 
 <h1>Escuela </h1>
-<h2>Nombre: @Model.Nombre</h2>
-<p><strong>Año Fundacion: @Model.AñoFundacion</strong></p>
+<h2>Nombre: @Model.Nombre </h2>
+<p><strong>Año Fundacion: @Model.AñoFundacion </strong></p>
