@@ -4,8 +4,14 @@
 
 @{
     ViewData["Title"] = "Informacion Escuela";
+    Layout = "Simple";  //Lo va a buscar en la carpeta Shared (Por no especificar la ruta)
 }
 
 <h1>Escuela </h1>
 <h2>Nombre: @Model.Nombre </h2>
 <p><strong>Año Fundacion: @Model.AñoFundacion </strong></p>
+
+<p><i> @ViewBag.CosaDinamica </i></p> <!--ViewBag nos sirve para mandar informacion adicional a 
+                                            la vista además de lo que ya le hemos mandado por medio 
+                                            del modelo (Necesario que se defina el viewBag en el controlador
+                                            -->

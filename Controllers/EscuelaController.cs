@@ -12,6 +12,8 @@ namespace ProyectoMVC.Controllers
             escuela.AñoFundacion = 2005;
             escuela.EscuelaId = Guid.NewGuid().ToString();
             escuela.Nombre = "TecNM Campus Progreso";
+
+            ViewBag.CosaDinamica = "La monja";
             
             return View(escuela);  //Se manda el objeto escuela como parámetro a la vista, para poder hacer uso de la información de escuela en la vista, en este caso imprimir la información
         }
