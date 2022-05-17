@@ -6,8 +6,20 @@
 }
 
 <h1>@ViewData["Title"] </h1>
-<h2>Nombre: @Model.Nombre </h2>
 
+<strong>Desde la vista normal</strong>
+<p>
+    Nombre: @Model.Nombre 
+    <br/>
+    Id: @Model.UniqueId
+</p>
+
+<strong>Desde la vista parcial</strong>
+<partial name ="AsignaturaSimple"/>    <!--NOS PERMITE INVOCAR VISTAS DESDE EL CONTROLADOR
+                                            Se le puede pasar otro parámetro -> model="" 
+                                            y pasarle otro modelo como parámetro, sin embargo,
+                                            en este caso asume que es el mismo modelo 
+                                            del cual tiene este archivo (Asignatura) -->
 
 <p><i> @ViewBag.CosaDinamica </i></p> 
 <p><i> @ViewBag.Fecha </i></p> 

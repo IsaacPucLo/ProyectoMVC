@@ -1,0 +1,19 @@
+﻿@model List<Asignatura>
+
+@{
+    ViewData["Title"] = "Informacion Asignatura";
+    Layout = "Simple"; 
+}
+
+<h1>@ViewData["Title"] </h1>
+
+<strong>Desde la vista parcial</strong>
+<!--Para imprimir la lista de Asignaturas-->
+@foreach (var asignatura in Model)
+{
+    <partial name ="AsignaturaSimple" model="asignatura" />     //En modele, Se pasa como parámetro asignatura para que corresponda al objeto que espera mi vista de AsignaturaSimple
+}
+
+
+<p><i> @ViewBag.CosaDinamica </i></p> 
+<p><i> @ViewBag.Fecha </i></p> 
