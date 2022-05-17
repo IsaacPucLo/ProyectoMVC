@@ -9,8 +9,8 @@ namespace ProyectoMVC.Controllers
         public IActionResult Index(){
 
             var escuela = new Escuela();
-            escuela.AñoFundacion = 2005;
-            escuela.EscuelaId = Guid.NewGuid().ToString();
+            escuela.AñoDeCreación = 2005;
+            escuela.UniqueId = Guid.NewGuid().ToString();
             escuela.Nombre = "TecNM Campus Progreso";
 
             ViewBag.CosaDinamica = "La monja";
