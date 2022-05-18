@@ -1,13 +1,3 @@
-
- // var escuela = new Escuela();
- // escuela.AñoDeCreación = 2005;
- // escuela.UniqueId = Guid.NewGuid().ToString();
- // escuela.Nombre = "TecNM Campus Progreso";
- // escuela.Ciudad = "Progreso";
- // escuela.Pais = "México";
- // escuela.TipoEscuela = TiposEscuela.Secundaria;
- // escuela.Dirección = "Boulevard 7ma";
-
 using System;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;

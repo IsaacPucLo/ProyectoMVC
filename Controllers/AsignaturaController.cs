@@ -13,7 +13,7 @@ namespace ProyectoMVC.Controllers
 
             var asignatura = new Asignatura
             {
-                UniqueId = Guid.NewGuid().ToString(),
+                Id = Guid.NewGuid().ToString(),
                 Nombre = "Programación"
             };
 
@@ -27,23 +27,23 @@ namespace ProyectoMVC.Controllers
             var listaAsignaturas = new List<Asignatura>() {
                 new Asignatura {
                 Nombre = "Matemáticas",
-                UniqueId = Guid.NewGuid ().ToString ()
+                Id = Guid.NewGuid ().ToString ()
                 },
                 new Asignatura {
                 Nombre = "Educación Física",
-                UniqueId = Guid.NewGuid ().ToString ()
+                Id = Guid.NewGuid ().ToString ()
                 },
                 new Asignatura {
                 Nombre = "Castellano",
-                UniqueId = Guid.NewGuid ().ToString ()
+                Id = Guid.NewGuid ().ToString ()
                 },
                 new Asignatura {
                 Nombre = "Ciencias Naturales",
-                UniqueId = Guid.NewGuid ().ToString ()
+                Id = Guid.NewGuid ().ToString ()
                 },
                 new Asignatura {
                 Nombre = "Programacion",
-                UniqueId = Guid.NewGuid ().ToString ()
+                Id = Guid.NewGuid ().ToString ()
                 }
             };
 
