@@ -8,11 +8,9 @@
 <h1>@ViewData["Title"] </h1>
 
 <strong>Desde la vista parcial</strong>
+
 <!--Para imprimir la lista de Asignaturas-->
-@foreach (var asignatura in Model)
-{
-    <partial name ="ObjetoEscuelaSimple" model="asignatura" />     //En modele, Se pasa como parámetro asignatura para que corresponda al objeto que espera mi vista de AsignaturaSimple
-}
+<partial name= "ListaObjetoEscuela" />
 
 
 <p><i> @ViewBag.CosaDinamica </i></p> 

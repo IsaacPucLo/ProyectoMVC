@@ -22,6 +22,7 @@ namespace ProyectoMVC.Controllers
 
             return View(alumno);  
         }
+        
         public IActionResult MultiAlumno()
         {
 

@@ -1,0 +1,21 @@
+@* Le decimos que la vista ya no va a ser fuertemente tipada, se deja debilmente tipada
+@model Lista<ObjetoEscuelaBase>
+*@
+
+<table>
+    <thead class="table table-dark table-hover">
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var obj in Model)
+    {
+        <tr>
+            <td>@obj.UniqueId</td>
+            <td>@obj.Nombre</td>
+        </tr>
+    }
+    </tbody>
+</table>
