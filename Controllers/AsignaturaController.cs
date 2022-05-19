@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using ProyectoMVC.Models;
 
@@ -10,47 +11,18 @@ namespace ProyectoMVC.Controllers
         
         public IActionResult Index()
         {
-
-            var asignatura = new Asignatura
-            {
-                Id = Guid.NewGuid().ToString(),
-                Nombre = "Programación"
-            };
-
-            ViewBag.Fecha = DateTime.Now;
-
-            return View(asignatura);  
+            return View(_context.Asignaturas.FirstOrDefault());  
         }
         public IActionResult MultiAsignatura()
         {
+            return View("MultiAsignatura",_context.Asignaturas); 
+        }
 
-            var listaAsignaturas = new List<Asignatura>() {
-                new Asignatura {
-                Nombre = "Matemáticas",
-                Id = Guid.NewGuid ().ToString ()
-                },
-                new Asignatura {
-                Nombre = "Educación Física",
-                Id = Guid.NewGuid ().ToString ()
-                },
-                new Asignatura {
-                Nombre = "Castellano",
-                Id = Guid.NewGuid ().ToString ()
-                },
-                new Asignatura {
-                Nombre = "Ciencias Naturales",
-                Id = Guid.NewGuid ().ToString ()
-                },
-                new Asignatura {
-                Nombre = "Programacion",
-                Id = Guid.NewGuid ().ToString ()
-                }
-            };
+        private EscuelaContext _context;
 
-            ViewBag.CosaDinamica = "La monja";
-            ViewBag.Fecha = DateTime.Now;
-
-            return View("MultiAsignatura",listaAsignaturas);  //Se especifica que va a lanzar la vista con el nombre entre comillas
+        public AsignaturaController(EscuelaContext context)
+        {
+            _context = context;
         }
     }
 }

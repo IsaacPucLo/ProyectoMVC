@@ -30,7 +30,7 @@ namespace ProyectoMVC.Models
             escuela.TipoEscuela = TiposEscuela.Secundaria;
             escuela.Dirección = "Boulevard 7ma";
             
-            modelBuilder.Entity<Escuela>().HasData(escuela);
+            modelBuilder.Entity<Escuela>().HasData(escuela); //Sembramos los datos en la base de datos
 
             modelBuilder.Entity<Asignatura>().HasData( 
                 new Asignatura {
