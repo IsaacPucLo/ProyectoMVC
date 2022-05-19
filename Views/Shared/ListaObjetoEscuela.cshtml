@@ -5,16 +5,16 @@
 <table>
     <thead class="table table-dark table-hover">
     <tr>
-        <th scope="col">Id</th>
         <th scope="col">Nombre</th>
+        <th scope="col">Id</th>
     </tr>
     </thead>
     <tbody>
     @foreach (var obj in Model)
     {
         <tr>
-            <td>@obj.Id</td>
             <td>@obj.Nombre</td>
+            <td>@obj.Id</td>
         </tr>
     }
     </tbody>

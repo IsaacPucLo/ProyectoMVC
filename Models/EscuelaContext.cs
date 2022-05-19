@@ -57,33 +57,33 @@ namespace ProyectoMVC.Models
                 var tmpList = new List<Asignatura>(){
                             new Asignatura
                         {
-                            Nombre = "Matemáticas",
+                            Id = Guid.NewGuid().ToString(),
                             CursoId = curso.Id,
-                            Id = Guid.NewGuid().ToString()
+                            Nombre = "Matemáticas"
                         },
                         new Asignatura
                         {
-                            Nombre = "Educación Física",
+                            Id = Guid.NewGuid().ToString(),
                             CursoId = curso.Id,
-                            Id = Guid.NewGuid().ToString()
+                            Nombre = "Educación Física"
                         },
                         new Asignatura
                         {
-                            Nombre = "Castellano",
+                            Id = Guid.NewGuid().ToString(),
                             CursoId = curso.Id,
-                            Id = Guid.NewGuid().ToString()
+                            Nombre = "Castellano"
                         },
                         new Asignatura
                         {
-                            Nombre = "Ciencias Naturales",
+                            Id = Guid.NewGuid().ToString(),
                             CursoId = curso.Id,
-                            Id = Guid.NewGuid().ToString()
+                            Nombre = "Ciencias Naturales"
                         },
                         new Asignatura
                         {
-                            Nombre = "Programacion",
+                            Id = Guid.NewGuid().ToString(),
                             CursoId = curso.Id,
-                            Id = Guid.NewGuid().ToString()
+                            Nombre = "Programacion"
                         }
                 };
                 listaCompleta.AddRange(tmpList);
@@ -100,7 +100,7 @@ namespace ProyectoMVC.Models
                                     Nombre = "101",
                                     Jornada = TiposJornada.Mañana },
                         new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "201", Jornada = TiposJornada.Mañana},
-                        new Curso   {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "301", Jornada = TiposJornada.Mañana},
+                        new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "301", Jornada = TiposJornada.Mañana},
                         new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "401", Jornada = TiposJornada.Tarde },
                         new Curso() {Id = Guid.NewGuid().ToString(), EscuelaId = escuela.Id, Nombre = "501", Jornada = TiposJornada.Tarde},
             };

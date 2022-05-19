@@ -6,35 +6,35 @@ using ProyectoMVC.Models;
 
 namespace ProyectoMVC.Controllers
 {
-    public class AlumnoController : Controller
+    public class CursoController : Controller
     {
         
         public IActionResult Index(string id)   //Usar el nombre "id" para el parámetro, ya que así lo dicta la convención
         {
             if (!string.IsNullOrWhiteSpace(id))
             {
-                var alumno = from alum in _context.Alumnos
-                            where alum.Id == id
-                            select alum;
+                var curso = from curs in _context.Cursos
+                            where curs.Id == id
+                            select curs;
 
-                return View(alumno.SingleOrDefault());  
+                return View(curso.SingleOrDefault());  
             }
             else{
-                return View("MultiAlumno",_context.Alumnos); 
+                return View("MultiCurso",_context.Cursos); 
             }
         }
         
-        public IActionResult MultiAlumno()
+        public IActionResult MultiCurso()
         {
             ViewBag.CosaDinamica = "La monja";
             ViewBag.Fecha = DateTime.Now;
 
-            return View("MultiAlumno",_context.Alumnos);
+            return View("MultiCurso",_context.Cursos);
         }
 
         private EscuelaContext _context;
 
-        public AlumnoController(EscuelaContext context)
+        public CursoController(EscuelaContext context)
         {
             _context = context;
         }
