@@ -43,14 +43,21 @@ namespace ProyectoMVC.Controllers
         public IActionResult Create(Curso curso)
         {
             ViewBag.Fecha = DateTime.Now;
+            
+            if (ModelState.IsValid) //Verifica que los requerimientos sean completados y lo toma valido
+            {
+                var escuela = _context.Escuelas.FirstOrDefault();
+                curso.EscuelaId = escuela.Id;       //Definimos a que escuela se le agrega el curso
 
-            var escuela = _context.Escuelas.FirstOrDefault();
-            curso.EscuelaId = escuela.Id;       //Definimos a que escuela se le agrega el curso
+                _context.Cursos.Add(curso);
+                _context.SaveChanges();
+                ViewBag.MensajeExtra = "Curso creado";  //Parametro mandado como validación a la vista
 
-            _context.Cursos.Add(curso);
-            _context.SaveChanges();
-
-            return View();
+                return View("Index", curso);    //Si se logra crear manda la vista index con el parámetro del curso creado para que lo muestre
+            }
+            else{
+                return View(curso);
+            }
         }
 
         private EscuelaContext _context;
